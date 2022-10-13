@@ -2,13 +2,13 @@ Constant/Value
 
 | Name| Description | Type | Value |
 | ---- | ---- | ---- |---- |
-| RoboBall | physical product | string | RoboBall|
-| versionNumber | product version number | string | 2.6 |
-| commStop | makes RoboBall stop | command | 0x00|
-| commMoveForward | moves the RoboBall forward | command | 0x01 |
-| commMoveBackward | moves RoboBall backward | command | 0x02 |
-| commTurnLeft | sends RoboBall to the left | command | 0x03 |
-| commTurnRight | sends RoboBall to the right | command | 0x04 |
-| errBadSignal | robot is not getting a good signal from the device | error code | 0xFF01 |
-| errBadCommand | Message means robot does not recognize the command | error code | 0xFF02 |
-|errBatteryLow | means Robot's battery is low | error code | 0xFF03|
+| productName | Product name | string | RoboBall|
+| versionNumber | Product version number | number | 2.6 |
+| commStop | Command code tells the RoboBall stop moving | command | 0x00|
+| commMoveForward | Command tells the RoboBall to move forward | command | 0x01 |
+| commMoveBackward | Command code tells the RoboBall to move backward | command | 0x02 |
+| commTurnLeft | Command code tells the RoboBall to go to the left| command | 0x03 |
+| commTurnRight | Command code tells the RoboBall to go to the right | command | 0x04 |
+| errBadSignal | Error code means that the device is not sending a good signal to the robot | error code | 0xFF01 |
+| errBadCommand | Error code message means that the robot does not understand the command | error code | 0xFF02 |
+|errBatteryLow | Error code message means that the robot's battery is low | error code | 0xFF03|
