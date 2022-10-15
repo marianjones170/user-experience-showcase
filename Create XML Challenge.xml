@@ -5,5 +5,5 @@
   <maxTemp unit="C">22</maxTemp>
   <minTemp unit="C">20</minTemp>
   <windSpeed unit="kph">12</windSpeed>
-  <danger unit="True", "False">false</danger>
+  <danger>false</danger>
 </dailyForecast>
