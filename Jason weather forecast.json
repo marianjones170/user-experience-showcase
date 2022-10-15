@@ -1,0 +1,49 @@
+{
+  "forecast": [
+  {
+    "Monday": {
+      "description":""
+      "maxTemp":
+      "minTemp":
+      "windQuality":
+      "danger":
+    }
+  },
+  {
+    "Tuesday": {
+      "description":""
+      "maxTemp":
+      "minTemp":
+      "windQuality":
+      "danger":
+    }
+  },
+  {
+    "Wednesday": {
+      "description":""
+      "maxTemp":
+      "minTemp":
+      "windQuality":
+      "danger":
+    }
+  },
+  {  
+    "Thursday": {
+      "description":"cloudy"
+      "maxTemp":
+      "minTemp":
+      "windQuality":
+      "danger":
+      }
+  },
+  {
+    "Friday":,{
+      "description":""
+      "maxTemp":
+      "minTemp":
+      "windQuality":
+      "danger":
+      }
+  }
+  ]
+}
