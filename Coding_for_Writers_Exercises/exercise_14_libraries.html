@@ -1,0 +1,32 @@
+Exercise 14: Libraries
+For this exercise, I used a JavaScript module to draw a chart. 
+
+<!DOCTYPE HTML>
+<html>
+<body onload="drawChart()">
+
+<script type="application/javascript" src="awesomechart.js">
+<canvas id="canvas1" width="300" height="300">
+// Only web browsers that support the HTML 5 canvas element will be able to view the text within the canvas element.
+  </canvas>
+
+function drawChart(){
+  if(!!document.createElement('canvas').getContext){
+  var mychart = new AwesomeChart('canvas1');
+  mychart.title = "Product Sales - 2010";
+  mychart.data = [1532, 3251, 3460, 1180, 6543];
+  mychart.labels = ["Desktops", "Laptops", "Netbooks", "Tablets", "Smartphones"]; mychart.draw();
+  }
+}
+                                                       // element is supported
+  var mychart = new AwesomeChart('canvas1');
+  mychart.title = "Product Sales - 2010";
+  mychart.data = [1532, 3251, 3460, 1180, 6543];
+  mychart.labels = ["Desktops", "Laptops", "Netbooks", "Tablets", "Smartphones"]; mychart.draw();
+  }
+}
+
+</script>
+
+</body>
+</html>
