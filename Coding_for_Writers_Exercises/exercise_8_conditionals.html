@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<h1> Exercise 8: Conditionals </h1>
+<body>
+<p> For this exercise, you’ll create some JavaScript functions with conditionals.</p>
+
+<h2>Start with this code </h2>
+<p> Create a new file in your text editor and paste in this code, which has two text boxes, three buttons, and a paragraph that can display a result. You should be pretty familiar with this by now.</p>
+
+<p><input type = "text" id="textbox1"></p>
+<p><input type = "text" id="textbox2"></p>
+<button onclick="login()">Login</button>
+<button onclick="compare()">Compare</button>
+<button onclick="showDirection()">Direction</button>
+<p id="result"></p>
+<script>
+function login () {
+  if (textbox1.value == "admin" && textbox2.value == "pass") {
+            result.innerHTML = "Logged in";
+} else {
+  result.innerHTML="Incorrect username and password";
+}
+function compare () {
+  if (textbox1.value.length > textbox2.value.length) {
+    result.innerHTML = "First is longer"
+}
+switch (abbrev) {
+  case "n" = north
+    return "North";
+    break;
+  case "s"
+    return "South"
+    break;
+  case "e"
+    return "East";
+    break;
+  case "w"
+    return "West";
+    break;
+  default:
+    return "Somewhere";
+}
+{
+  function showDirection () {
+    result.innHTML = "Go" + directionName (textbox1.value)
+  }
+}
+
+}
+</script>
+</body>
+</html>

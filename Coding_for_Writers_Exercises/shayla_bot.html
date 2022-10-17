@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+p {
+ line-height: 110%;
+}
+</style>
+</head>
+<body onload="initialize()">
+
+<h1>Hi I'm Shayla Bot!</h1>
+
+<img src="https://shaylahilt.com/wp-content/uploads/Facetune_22-08-2018-23-25-59-e1629587068647.jpg" alt="smiling pitcture of Shayla">
+
+
+<form id="myForm">
+  Talk to me <input id="textbox" size="150"><br>
+  <input type="button" onclick="submitLine()" value="Enter">
+  <input type="button" onclick="myFunction()" value="Reset form">
+</form>
+
+<script>
+function myFunction() {
+  document.getElementById("myForm").reset();
+}
+</script>
+
+<div id="conversation"></div>
+
+<script>
+var therapySession;
+
+var genericResponses = [
+  "Imagine your inner child; what would you say to that girl?",
+  "Go on.",
+  "Let it all out.",
+  "You have been through a lot. You have a lot of trauma",
+  "It's normal to feel this way.",
+  "Keep talking. You are not crazy.",
+  "It's okay to want love.",
+  "Please be kind to yourself."];
+
+const questionResponses = [
+  "That cause of your trauma. You were trying to make yourself feel safe",
+  "What do <em>you</em> think?",
+  "You have attachment issues and you felt activated. You are perfectly normal.",
+  "Have you tried being kinder to yourself?",
+  "Please be kind to yourself."];
+
+const exclamationResponses = [
+  "I'm glad that you're able to recognize that.",
+  "Think to your childhood. When was another time you felt unsafe?",
+  "You can always express your emotions with me",
+  "I'm not going anywhere. I will always be here for you."];
+
+const povSwitches = { "I": "you",
+  "i": "you",
+  "me": "you", "myself": "yourself", "am": "are",
+  "my": "your",
+  "My": "your",
+  "I'm": "you're", "I'd": "you'd",
+  "I'll": "you'll",
+  "i'm": "you're",
+  "i'd": "you'd",
+  "i'll": "you'll"
+}
+
+const questionStarts = [
+ "Why do you say that",
+ "How is it that",
+ "Can you tell me more about how",
+ "And why is it that",
+ "Can you explain why you say that"];
+
+ function initialize() {
+  therapySession = "<p>Hi lady. I am a Licensed Clinical Psychotherapist I've helped adults with depression, anxiety, trauma, relationship issues,<br>and low self-esteem for 20 years. I provide holistic, person-centered care in a supportive, safe environment.</br></p>";
+  conversation.innerHTML = therapySession;
+ }
+
+ function clform()
+{
+ documentgetElementById('textbox').reset();
+}
+
+function submitLine() {
+  var patientLine = textbox.value;
+  therapySession += "<p> <em>" + patientLine + "</em> </p>";
+  var therapistLine;
+  if (lastChar(patientLine) == "?") {
+    therapistLine = randomElement(questionResponses);
+  } else if (lastChar(patientLine) == "!") {
+    therapistLine = randomElement(exclamationResponses);
+  } else {
+    therapistLine = createQuestion(patientLine);
+ }
+ // Still no good response, so use a basic response.
+ if (therapistLine == null) {
+ therapistLine = randomElement(genericResponses);
+ }
+ therapySession += "<p>" + therapistLine + "</p>";
+  conversation.innerHTML = therapySession;
+ }
+
+function randomElement(myArray) {
+ var index = Math.floor(Math.random() * myArray.length);
+ return myArray[index];
+}
+
+function lastChar(myString) {
+ return myString.substring(myString.length - 1);
+}
+
+function createQuestion (patientLine){
+  if (patientLine.toLowerCase().indexOf("you") != -1) { // Can't handle this one. Return null.
+return null;
+}
+
+if (lastChar(patientLine) == ".") {
+ patientLine = patientLine.substring(0, patientLine.length - 1);
+}
+var modifiedLine = " " + patientLine + " ";
+
+var found = false;
+for (var property in povSwitches) {
+  if (povSwitches.hasOwnProperty(property)) {
+    var modifiedProperty = " " + property + " ";
+    if (modifiedLine.indexOf(modifiedProperty) != -1) {
+      modifiedLine = modifiedLine.replace(modifiedProperty,
+        " " + povSwitches[property] + " ");
+       found = true;
+     }
+   }
+}
+
+if (found) {
+ modifiedLine = modifiedLine.substring(0, modifiedLine.length - 1);
+ return randomElement(questionStarts) + " " + modifiedLine + "?";
+}
+ return null;
+}
+
+</script>
+</body>
+</html>
