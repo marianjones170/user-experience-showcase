@@ -1,0 +1,27 @@
+// Exercise 12: Collections.
+// I wrote some JavaScript functions that make use of arrays and objects for this exercise. I was given a starter code and asked to fill in the blanks.
+// To begin, I was given some code. I wrote code to call a function when the page loads; the function is set to demoLoop, which contains a "for loop."
+
+<!DOCTYPE HTML>
+<html>
+<body onload="demoCollections()">
+
+<div id="resultDiv"></div>
+
+<script>
+var daysOfWeek =
+ ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+function demoCollections() {
+  var result = "";
+  // Use of Array Objects
+  result += "<p>" + "First day: " + daysOfWeek[0] + "</p>";
+  result += "<p>" + "Last day: " + daysOfWeek[daysOfWeek.length - 1] + "</p>";
+  // This is a for loop through array objects.
+ for (var i = daysOfWeek.length - 1; i >= 0; i--) {
+   result += "<p>" + daysOfWeek[i] + "</p>";
+  }
+ resultDiv.innerHTML = result;
+}
+</script>
+</body>
+</html>
