@@ -1,4 +1,6 @@
-Constant/Value
+## Constant/Value
+
+A exercise in which I was given the instructions for operating a little robotic ball. The lines of code that need to be documented are as follows:
 
 | Name| Description | Type | Value |
 | ---- | ---- | ---- |---- |
