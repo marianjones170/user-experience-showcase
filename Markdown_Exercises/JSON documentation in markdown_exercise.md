@@ -1,12 +1,12 @@
 ## Step 1: One day's forecast.
-<code>{
+<pre><code>{
     "date": "2015-09-01", 
     "description": "sunny", 
     "maxTemp": 22, 
     "minTemp": 20, 
     "windSpeed": 12, 
     "danger": false
-}</code>
+}</pre></code>
 | Element | Description | Type | Notes |
 |---|---|---|---|
 |2015-09-01| Sunny day with a high of 22 degrees and a low of 20 degrees | Daily weather | No danger |
@@ -14,7 +14,7 @@
 This table contains information about the daily forecast for this particular day in 2015.
 
 ## Step 2: Three-day forecast
-{
+<pre><code>{
     "longitude": 47.60, 
     "latitude": 122.33, 
     "forecasts": [
@@ -43,7 +43,7 @@ This table contains information about the daily forecast for this particular day
         }               
     ]
 }
-
+</pre></code>
 | Date | Temperature range from low to high | Wind Speed| Danger | Outlook|
 |---|---|---|---|---|
 |2015-09-01|20 to 22|12|false|Sunny|
@@ -53,7 +53,7 @@ This table contains information about the daily forecast for this particular day
 Please note that the longitude and latitude for the entire object are 47.60 and 122.33 degrees, respectively.
 
 ## Step 3: Meeting Request
-
+<pre><code>
 {
     "meeting" : {
        "time": "2015-09-01 10:00",
@@ -64,7 +64,7 @@ Please note that the longitude and latitude for the entire object are 47.60 and 
         "invitees": ["michael@example.com", "thelma@example.com", "david@example.com", "leon@example.com"]
     } 
 }
-
+</pre></code>
 | Element | Description |Type | Notes|
 |---|---|---|---|
 |Time| Date and Time of Forecast | Integer | Format is YYYY-MO-DD |
